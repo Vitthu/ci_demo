@@ -1,7 +1,4 @@
 <?php
-// this my change
-//hello
-/// testing 123
 
 /**
  * CodeIgniter

@@ -14,7 +14,9 @@ class User extends CI_Controller {
 
     public function index() {
         if ($this->input->post()) {
-
+            print_r($this->input->post('username'));
+            $this->db->update('users', ['first_name' => $this->input->post('username')], ['id' => 1]);
+            die;
             $username = $this->input->post('username');
             $password = md5($this->input->post('password'));
             $res = $this->user_model->checkLogin($username, $password);
